@@ -3,10 +3,10 @@ import re
 
 def get_snils(snils):
     num_snils = re.sub(r'\D', '', snils)
-    if len(num_snils) > 11:
+    if len(num_snils) != 11:
         print('Номер снился введен некорректно!')
     else:
-        if int(num_snils) > 1001998:
+        if int(num_snils[0:9]) > 1001998:
             print('OK')
             res = 0
             for j, num in enumerate(num_snils):
